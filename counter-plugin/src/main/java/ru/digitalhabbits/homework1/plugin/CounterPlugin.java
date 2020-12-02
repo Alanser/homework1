@@ -9,7 +9,10 @@ public class CounterPlugin
     @Nullable
     @Override
     public String apply(@Nonnull String text) {
-        // TODO: NotImplemented
-        return "CounterPlugin: NotImplemented";
+        int lines = text.split("\\n").length;
+        int words = text.split("\\s+").length;
+        long letters = text.chars().count();
+
+        return lines + ";" + words + ";" + letters;
     }
 }
